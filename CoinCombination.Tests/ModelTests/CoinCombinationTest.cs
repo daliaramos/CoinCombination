@@ -28,5 +28,12 @@ namespace CoinCombination.Tests
       CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
       Assert.AreEqual(1, testCoinCombination.CalculateNickels(8));
     }
+
+    [TestMethod]
+    public void CoinCombination_CalculatePennies_Int()
+    {
+      CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
+      Assert.AreEqual(3, testCoinCombination.CalculatePennies(3));
+    }
   }
 }
