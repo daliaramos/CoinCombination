@@ -1,7 +1,5 @@
-<h1>Results</h1>
-<ul>
-  @foreach(var result in Model)
-  {
-    <li>@result</li>
-  }
-</ul>
+<h1>@Model.GetTotalCents() cents</h1>
+<h3>Quarters: @Model.GetQuarters()</h3>
+<h3>Dimes: @Model.GetDimes()</h3>
+<h3>Nickels: @Model.GetNickels()</h3>
+<h3>Pennies: @Model.GetPennies()</h3>

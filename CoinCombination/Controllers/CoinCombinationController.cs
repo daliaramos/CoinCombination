@@ -15,8 +15,18 @@ namespace CoinCombination.Controllers
     [HttpPost("/")]
     public ActionResult Display()
     {
-
-      return View();
+      CoinCombinationGenerator newCoinCombination = new CoinCombinationGenerator();
+      int cents = Int32.Parse(Request.Form["cents"]);
+      int quarters = newCoinCombination.CalculateQuarters(cents);
+      int dimes = newCoinCombination.CalculateDimes(cents - (quarters * 25));
+      int nickels = newCoinCombination.CalculateNickels(cents - (quarters * 25) - (dimes * 10));
+      int pennies = newCoinCombination.CalculatePennies(cents - (quarters * 25) - (dimes * 10) - (nickels * 5));
+      newCoinCombination.SetQuarters(quarters);
+      newCoinCombination.SetDimes(dimes);
+      newCoinCombination.SetNickels(nickels);
+      newCoinCombination.SetPennies(pennies);
+      newCoinCombination.SetTotalCents(cents);
+      return View(newCoinCombination);
     }
 
   }

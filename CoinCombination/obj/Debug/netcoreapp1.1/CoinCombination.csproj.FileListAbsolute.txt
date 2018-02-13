@@ -1,0 +1,8 @@
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/bin/Debug/netcoreapp1.1/CoinCombination.deps.json
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/bin/Debug/netcoreapp1.1/CoinCombination.runtimeconfig.json
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/bin/Debug/netcoreapp1.1/CoinCombination.runtimeconfig.dev.json
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/bin/Debug/netcoreapp1.1/CoinCombination.dll
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/bin/Debug/netcoreapp1.1/CoinCombination.pdb
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/obj/Debug/netcoreapp1.1/CoinCombination.AssemblyInfo.cs
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/obj/Debug/netcoreapp1.1/CoinCombination.dll
+/Users/Guest/Desktop/Coin-Combination/CoinCombination/obj/Debug/netcoreapp1.1/CoinCombination.pdb
