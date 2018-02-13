@@ -14,5 +14,11 @@ namespace CoinCombination.Tests
       CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
       Assert.AreEqual(2, testCoinCombination.CalculateQuarters(68));
     }
+    [TestMethod]
+    public void CoinCombination_CalculateDimes_Int()
+    {
+      CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
+      Assert.AreEqual(1, testCoinCombination.CalculateDimes(18));
+    }
   }
 }
