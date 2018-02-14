@@ -35,5 +35,13 @@ namespace CoinCombination.Tests
       CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
       Assert.AreEqual(3, testCoinCombination.CalculatePennies(3));
     }
+
+    [TestMethod]
+    public void CoinCombination_CalculateAllCoins_List()
+    {
+      CoinCombinationGenerator testCoinCombination = new CoinCombinationGenerator();
+      List<int> coinsList = new List<int>(){2,1,1,3};
+      CollectionAssert.AreEqual(coinsList, testCoinCombination.CalculateAllCoins(68));
+    }
   }
 }
