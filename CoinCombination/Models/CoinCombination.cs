@@ -11,11 +11,6 @@ namespace CoinCombination.Models
     private int _pennies;
     private int _totalCents;
 
-    // public CoinCombinationGenerator()
-    // {
-    //
-    // }
-
     public int GetQuarters()
     {
       return _quarters;
@@ -83,7 +78,26 @@ namespace CoinCombination.Models
 
     public int CalculatePennies(int cents)
     {
-      return cents;
+      return (cents);
     }
+
+    public List<int> CalculateAllCoins(int cents)
+    {
+      List<int> coinsList = new List<int>();
+
+      coinsList.Add(CalculateQuarters(cents));
+      cents = cents - (CalculateQuarters(cents) * 25);
+
+      coinsList.Add(CalculateDimes(cents));
+      cents = cents - (CalculateDimes(cents) * 10);
+
+      coinsList.Add(CalculateNickels(cents));
+      cents = cents - (CalculateNickels(cents) * 5);
+
+      coinsList.Add(CalculatePennies(cents));
+
+      return coinsList;
+    }
+
   }
 }

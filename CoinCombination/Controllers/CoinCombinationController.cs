@@ -17,14 +17,15 @@ namespace CoinCombination.Controllers
     {
       CoinCombinationGenerator newCoinCombination = new CoinCombinationGenerator();
       int cents = Int32.Parse(Request.Form["cents"]);
-      int quarters = newCoinCombination.CalculateQuarters(cents);
-      int dimes = newCoinCombination.CalculateDimes(cents - (quarters * 25));
-      int nickels = newCoinCombination.CalculateNickels(cents - (quarters * 25) - (dimes * 10));
-      int pennies = newCoinCombination.CalculatePennies(cents - (quarters * 25) - (dimes * 10) - (nickels * 5));
-      newCoinCombination.SetQuarters(quarters);
-      newCoinCombination.SetDimes(dimes);
-      newCoinCombination.SetNickels(nickels);
-      newCoinCombination.SetPennies(pennies);
+      // int quarters = newCoinCombination.CalculateQuarters(cents);
+      // int dimes = newCoinCombination.CalculateDimes(cents - (quarters * 25));
+      // int nickels = newCoinCombination.CalculateNickels(cents - (quarters * 25) - (dimes * 10));
+      // int pennies = newCoinCombination.CalculatePennies(cents - (quarters * 25) - (dimes * 10) - (nickels * 5));
+      List<int> coinsList = newCoinCombination.CalculateAllCoins(cents);
+      newCoinCombination.SetQuarters(coinsList[0]);
+      newCoinCombination.SetDimes(coinsList[1]);
+      newCoinCombination.SetNickels(coinsList[2]);
+      newCoinCombination.SetPennies(coinsList[3]);
       newCoinCombination.SetTotalCents(cents);
       return View(newCoinCombination);
     }
